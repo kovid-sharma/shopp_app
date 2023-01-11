@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
-
-
+import 'grid.dart';
+import 'list.dart';
+import 'checkout.dart';
+import 'signup.dart';
 import 'login2.dart';
+import 'log3.dart';
+import 'cart.dart';
+import 'addtocart.dart';
+import 'home.dart';
+import 'ordercnf.dart';
+import 'profile.dart';
 class Splash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -27,15 +35,23 @@ void main() async {
     routes: {
 
 
-
+      'main':(context)=>MyApp(),
      'log2': (context)=>login2(),
-
-
+      'log3': (context)=>login3(),
+      'signup':(context)=>signup(),
+       'home': (context)=>home(),
+      'grid':(context)=>grid(),
+      'list':(context)=>list(),
+      'add':(context)=>addtocart(),
+      'cart':(context)=>cart(),
+      'chekout':(context)=>checkout(),
+      'cnf':(context)=>ordercnf(),
+      'profile':(context)=>profile(),
 
 
     },
       home: SplashScreen(
-      seconds: 4,
+      seconds: 1,
       navigateAfterSeconds: MyApp(),
       image: Image.asset('images/Screenshot (305).png'),
       backgroundColor: Color.fromARGB(255,222,139,14),
@@ -194,8 +210,6 @@ class MyApp extends StatelessWidget {
                                 width: double.infinity,
                                 child: ElevatedButton(
                                     onPressed: (){
-
-
                                       Navigator.pushNamed(context,'log2');
                                     },
                                     child: Text(

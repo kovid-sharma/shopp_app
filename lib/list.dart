@@ -1,20 +1,20 @@
 import 'main.dart';
 import 'package:flutter/material.dart';
-class addtocart extends StatefulWidget {
-  const addtocart({Key? key}) : super(key: key);
+class list extends StatefulWidget {
+  const list({Key? key}) : super(key: key);
 
   @override
-  State<addtocart> createState() => _addtocartState();
+  State<list> createState() => _listState();
 }
 
-class _addtocartState extends State<addtocart> {
+class _listState extends State<list> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: GestureDetector(
           onTap: ()
           {
-            Navigator.pushNamed(context, 'cart');
+            Navigator.pushNamed(context, 'add');
           },
         )
     );
